@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:24 +0000] "GET /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 200 12303
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:24 +0000] "GET /Farmacia/faces/pages/RES_NOT_FOUND HTTP/1.1" 500 2047
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:24 +0000] "GET /Farmacia/faces/javax.faces.resource/primefaces.css?ln=primefaces&v=4.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:24 +0000] "GET /Farmacia/faces/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=4.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:24 +0000] "GET /Farmacia/faces/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=4.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:25 +0000] "GET /Farmacia/faces/javax.faces.resource/primefaces.js?ln=primefaces&v=4.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:25 +0000] "GET /Farmacia/faces/javax.faces.resource/layout/layout.css?ln=primefaces&v=4.0 HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [20/Jan/2021:19:15:25 +0000] "GET /Farmacia/faces/javax.faces.resource/layout/layout.js?ln=primefaces&v=4.0 HTTP/1.1" 304 -

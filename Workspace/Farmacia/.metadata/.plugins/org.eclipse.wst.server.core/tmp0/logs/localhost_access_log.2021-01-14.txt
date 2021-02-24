@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:09:26 +0000] "GET /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 200 11060
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:09:26 +0000] "GET /Farmacia/faces/pages/RES_NOT_FOUND HTTP/1.1" 500 2047
+127.0.0.1 - - [14/Jan/2021:18:10:12 +0000] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:10:14 +0000] "GET /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 200 11060
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:10:14 +0000] "GET /Farmacia/faces/pages/RES_NOT_FOUND HTTP/1.1" 500 2831
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:10:28 +0000] "POST /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 200 443
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:24:36 +0000] "GET /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 500 4750
+127.0.0.1 - - [14/Jan/2021:18:25:40 +0000] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:25:42 +0000] "GET /Farmacia/faces/pages/fornecedores.xhtml HTTP/1.1" 200 11366
+0:0:0:0:0:0:0:1 - - [14/Jan/2021:18:25:42 +0000] "GET /Farmacia/faces/pages/RES_NOT_FOUND HTTP/1.1" 500 2831

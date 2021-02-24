@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+  .ui-layout-north {
+                z-index:40 !important;
+                overflow:visible !important;;
+                overflow-y:visible;
+                overflow:auto;
+            }
+
+            .ui-layout-north .ui-layout-unit-content {
+                overflow:visible !important;
+                overflow-y:visible !important ;
+                overflow:auto;
+            }
+  .ui-widget, .ui-widget .ui-widget {
+	font-size: 15% !important;
+  }
+  

@@ -1,0 +1,97 @@
+	/*
+		 * // SALVAR--------------------- Fornecedores f1 = new Fornecedores();
+		 * f1.setDescricao("DESCRICAO 2");
+		 * 
+		 * Fornecedores f2 = new Fornecedores(); f2.setDescricao("DESCRICAO 3");
+		 * 
+		 * FornecedoresDAO fdao= new FornecedoresDAO(); try { fdao.salvar(f1);
+		 * //fdao.salvar(f2); System.out.print("Salvo com suscesso"); } catch
+		 * (SQLException e) { System.out.print("Erro ao salvar"); e.printStackTrace(); }
+		 */
+		// -------------------- deletar-----------------
+		/*
+		 Fornecedores f1 = new Fornecedores(); f1.setCodigo(1);
+		  
+		 FornecedoresDAO fdao= new FornecedoresDAO();
+		 
+		 try { 
+			 
+		  fdao.excluir(f1);
+		  
+		  System.out.print("Deletado com suscesso");
+		  } catch (SQLException e) {
+		  System.out.print("Erro ao deletar"); e.printStackTrace();
+		  
+		  }*/
+		 
+          // -------------------Editar-----------------
+		/*
+		 * Fornecedores f1 = new Fornecedores(); f1.setCodigo(7);
+		 * f1.setDescricao("Teste");
+		 * 
+		 * FornecedoresDAO fdao= new FornecedoresDAO();
+		 * 
+		 * try { fdao.editar(f1);
+		 * 
+		 * System.out.print("Editado com suscesso"); } catch (SQLException e) {
+		 * System.out.print("Erro ao Editar"); e.printStackTrace(); }
+		 */
+     // ---------------------Buscar Codigo ---------------------------
+		
+		/*Fornecedores f1 = new Fornecedores();
+		f1.setCodigo(2);
+
+		Fornecedores f2 = new Fornecedores();
+		f2.setCodigo(3);
+
+		FornecedoresDAO fdao = new FornecedoresDAO();
+		try {
+			Fornecedores f3 = fdao.buscaPorCodigo(f1);
+			Fornecedores f4 = fdao.buscaPorCodigo(f2);
+
+			System.out.print("Resultado 1: " + f3);
+			System.out.print("Resultado 1: " + f4);
+		} catch (SQLException e) {
+			System.out.print("Erro ao buscar");
+			e.printStackTrace();
+		} 
+		*/
+		
+		// --------------------listar -----------------------------------
+		/*
+		FornecedoresDAO fdao = new FornecedoresDAO();
+		try {
+		   ArrayList<Fornecedores>lista = fdao.listar();
+		   
+		   for (Fornecedores f : lista) {
+			   System.out.print("Resultado 1: " + f);  
+		   }
+		   
+		   
+				   
+		} catch (SQLException e) {
+			System.out.print("Erro ao Listar");
+			e.printStackTrace();
+		}*/
+		
+		// -------------------------Listar Descricao----------------------
+	
+		
+		/*Fornecedores f1 = new Fornecedores();
+		f1.setDescricao("Descr");
+		
+		FornecedoresDAO fdao = new FornecedoresDAO();
+		try {
+			   ArrayList<Fornecedores>lista = fdao.buscarPorDescricao(f1);
+			   
+			   for (Fornecedores f : lista) {
+				   System.out.print("Resultado 1: " + f);  
+			   }
+			   
+			   
+					   
+			} catch (SQLException e) {
+				System.out.print("Erro ao buscar");
+				e.printStackTrace();
+			}
+	}*/

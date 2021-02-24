@@ -1,0 +1,16 @@
+
+como criar um cadastro de produto em python
+
+
+https://github.com/netopaschoal/cadastro_produtos_python_mysql
+
+https://www.youtube.com/watch?v=SpHp0IfhorY&t=761s
+
+
+
+------------------------------------------------------------------------
+
+https://www.youtube.com/watch?v=UgJd7SvZyLY
+
+CONEXAO DE BANCO DE DADOS em java
+
