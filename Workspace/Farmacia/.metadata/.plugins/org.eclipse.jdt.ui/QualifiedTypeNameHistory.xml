@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="com.mysql.jdbc.Connection"/>
     <fullyQualifiedTypeName name="com.mysql.jdbc.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="br.com.farmacia.factory.ConectDBPostgrees"/>
     <fullyQualifiedTypeName name="br.com.farmacia.factory.ConexaoPostgres"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -16,9 +15,14 @@
     <fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
     <fullyQualifiedTypeName name="br.com.farmacia.DAO.FornecedoresDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="br.com.farmacia.bean.PostConstruct"/>
     <fullyQualifiedTypeName name="javax.faces.model.ListDataModel"/>
     <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
     <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
     <fullyQualifiedTypeName name="br.com.farmacia.util.JSFUtil"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="org.junit.Ignore"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.bean.PostConstruct"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.domain.Produtos"/>
+    <fullyQualifiedTypeName name="br.com.farmacia.DAO.ProdutoDAO"/>
 </qualifiedTypeNameHistroy>

@@ -52,7 +52,7 @@
 					<p:commandButton value="Novo"
 						actionListener="#{MBFornecedores.prepararNovo}"
 						oncomplete="PF('dlgforExcluir').show();"
-						update="frmforExcluir:pnforExcluir" />
+						update="frmforNovo:pnforNovo" />
 				</f:facet>
 			</p:dataTable>
 
@@ -82,7 +82,6 @@
 						onclick="PF('dlgforNovo').hide();" />
 				</h:panelGrid>
 			</h:form>
-
 		</p:dialog>
 
 		<p:dialog widgetVar="dlgExcluir" closable="false" draggable="false"

@@ -8,9 +8,9 @@ public class ConexaoFactory {
 	
 // -----------------------------------Conexao com MYSQL ---------------------------------------------------------
 
-private static final String USUARIO = "user";
-private static final String SENHA = "password";
-private static final String URL = "jdbc:mysql://localhost:3306/sistema ?autoReconnect=true&useSSL=false";
+private static final String USUARIO = "root";
+private static final String SENHA = "";
+private static final String URL = "jdbc:mysql://localhost:3306/sistema?autoReconnect=true&useSSL=false";
 private static Connection conexao;
 
 

@@ -18,34 +18,33 @@ public class FornecedoresBean {
 	
 	private Fornecedores fornecedores;	
 	private ArrayList<Fornecedores>itens;
-	
-	
-	public ArrayList<Fornecedores> getItens() {
-		return itens;
-	}
-
-	public void setItens(ArrayList<Fornecedores> itens) {
-		this.itens = itens;
-	}
 	private ArrayList<Fornecedores>itensFiltrados;
 	
-	public Fornecedores getFornecedores() {
-		return fornecedores;
-	}
+	
 
-	public void setFornecedores(Fornecedores fornecedores) {
-		this.fornecedores = fornecedores;
-	}
-	public ArrayList<Fornecedores> getItensFiltrados() {
-		return itensFiltrados;
-	}
+public Fornecedores getFornecedores() {
+	return fornecedores;
+}
 
-	public void setItensFiltrados(ArrayList<Fornecedores> itensFiltrados) {
-		this.itensFiltrados = itensFiltrados;
-	}
-    
+public void setFornecedores(Fornecedores fornecedores) {
+	this.fornecedores = fornecedores;
+}
 
+public ArrayList<Fornecedores> getItens() {
+	return itens;
+}
 
+public void setItens(ArrayList<Fornecedores> itens) {
+	this.itens = itens;
+}
+
+public ArrayList<Fornecedores> getItensFiltrados() {
+	return itensFiltrados;
+}
+
+public void setItensFiltrados(ArrayList<Fornecedores> itensFiltrados) {
+	this.itensFiltrados = itensFiltrados;
+}
 
 @PostConstruct
 public void prepararPesquisa() {

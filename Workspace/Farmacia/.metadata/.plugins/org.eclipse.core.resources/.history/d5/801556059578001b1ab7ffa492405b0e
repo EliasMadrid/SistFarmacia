@@ -1,0 +1,71 @@
+package br.com.farmacia.test;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+import br.com.farmacia.DAO.FornecedoresDAO;
+import br.com.farmacia.DAO.ProdutoDAO;
+import br.com.farmacia.domain.Fornecedores;
+import br.com.farmacia.domain.Produtos;
+import br.com.farmacia.factory.ConexaoPostgres;
+
+public class ProdutosDAOTeste {
+	@Test
+	public void salvar() throws ClassNotFoundException, SQLException{
+	Produtos p1 = new Produtos();
+	 p1.setDescricao("DIPIRONA");
+	 p1.setPreco(2.99);
+	 p1.setQuantidade(12L);
+	 
+	 
+	 Fornecedores f= new Fornecedores(); 
+	 f.setCodigo(12);
+	 p1.setFornecedores(f);
+	 
+	 
+	 ProdutoDAO fdao= new ProdutoDAO(); 
+	
+	 fdao.salvar(p1);
+	 
+	 System.out.print("Salvo com suscesso"); 
+	 
+	}
+	
+	public ArrayList<Produtos> listar() throws SQLException, ClassNotFoundException {
+
+		StringBuilder sql = new StringBuilder();
+		sql.append("SELECT p.codigo, p.descricao, p.preco, p.quantidade, f.codigo, f.descricao ");
+		sql.append("FROM produtos p ");
+		sql.append("INNER JOIN fornecedores f ON f.codigo = p.fornecedores_codigo ");
+
+		Connection conn = ConexaoPostgres.conectar();
+
+		PreparedStatement pst = conn.prepareStatement(sql.toString());
+
+		ResultSet rs = pst.executeQuery();
+
+		ArrayList<Produtos> lista = new ArrayList<Produtos>();
+		while (rs.next()) {
+
+			Fornecedores f = new Fornecedores();
+			f.setCodigo(rs.getLong("codigo"));
+			f.setDescricao(rs.getString("descricao"));
+			
+			Produtos p = new Produtos();
+			p.setCodigo(rs.getLong("codigo"));
+			p.setDescricao(rs.getString("descricao"));
+			p.setPreco(rs.getDouble("preco"));
+			p.setQuantidade(rs.getLong("quantidade"));
+			p.setFornecedores(f);
+
+			lista.add(f);
+		}
+
+		return lista;
+	}
+}
