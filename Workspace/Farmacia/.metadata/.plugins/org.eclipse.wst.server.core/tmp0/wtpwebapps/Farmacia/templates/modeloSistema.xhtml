@@ -11,6 +11,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets"
 <h:head>
 
 <h:outputStylesheet library="css" name="style.css"/>
+<h:outputScript library="js" name="scripts.js"/>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Layout Sistema</title>
@@ -20,12 +21,13 @@ xmlns:ui="http://java.sun.com/jsf/facelets"
 <p:growl id="msgGlobal" life="3000"/>
 
 	<p:layout fullPage="true">
-	    <p:layoutUnit position="north" size="400" header="Pharmacie System" resizable="true" closable="true" collapsible="true" >
+	
+	    <p:layoutUnit position="north" size="200" header="Pharmacie System" resizable="true" closable="true" collapsible="true" >
 	        <ui:insert name="menu"/>
 	    </p:layoutUnit>
 	    
 	     <p:layoutUnit position="center">
-	        <ui:insert name="Conteudo"/>
+	        <ui:insert name="conteudo"/>
 	    </p:layoutUnit>
 	    
 	    

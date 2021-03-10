@@ -127,5 +127,43 @@ public void excluir() {
 	 
 }
 
+public void editar() {
+	try {
+		ProdutoDAO fdao= new ProdutoDAO();
+		fdao.editar(produtos);
+		
+		// codigo para atualizar a lista
+		
+		itens = fdao.listar();
+		
+		
+		JSFUtil.adicionarMensagemSucesso("Produto editado com suscesso!");
+		
+	} catch (ClassNotFoundException e) {
+		
+		e.printStackTrace();
+	} catch (SQLException e) {
+		JSFUtil.adicionarMensagemErro("ex.getMessage()");
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	 
+}
+
+public void prepararEditar() {
+    
+    try {
+    	produtos = new Produtos();    
+        FornecedoresDAO dao = new FornecedoresDAO();
+		comboFornecedores = dao.listar();
+	} catch (ClassNotFoundException e) {
+		
+		e.printStackTrace();
+	} catch (SQLException e) {
+		JSFUtil.adicionarMensagemErro("ex.getMessage()");
+		e.printStackTrace();
+	}
+}
+
 
 }

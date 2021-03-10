@@ -9,9 +9,13 @@
 
 	<ui:define name="menu">
 		<ui:include src="/includes/menu.xhtml" />
-
+     </ui:define>
+     
+     <ui:define name="conteudo">
 		<h:form id="frmfornecedores">
-
+            
+            <f:facet name="header"> Lista de Fornecedores</f:facet>
+             
 			<p:dataTable id="tbfornecedores" 
 			    widgetVar="tabelaFornecedores"
 				emptyMessage="Nenhum registro foi encontrado!"
@@ -20,13 +24,16 @@
 				rows="8">
 
 
-				<f:facet name="header"> Lista de Fornecedores</f:facet>
-				<p:column headerText="Código" sortBy="#{item.codigo}"
+				
+				
+				<p:column headerText="Código" 
+				    sortBy="#{item.codigo}"
 					filterBy="#{item.codigo}">
 					<h:outputText value="#{item.codigo}" />
 				</p:column>
 
-				<p:column headerText="Descricao" sortBy="#{item.descricao}"
+				<p:column headerText="Descricao" 
+				    sortBy="#{item.descricao}"
 					filterBy="#{item.descricao}">
 					<h:outputText value="#{item.descricao}" />
 				</p:column>
@@ -51,7 +58,7 @@
 				<f:facet name="footer">
 					<p:commandButton value="Novo"
 						actionListener="#{MBFornecedores.prepararNovo}"
-						oncomplete="PF('dlgforExcluir').show();"
+						oncomplete="PF('dlgforNovo').show();"
 						update="frmforNovo:pnforNovo" />
 				</f:facet>
 			</p:dataTable>
@@ -67,18 +74,20 @@
 
 				<h:panelGrid id="pnforNovo" columns="2">
 
-					<p:outputLabel value="Descricao :" />
-					<h:inputText size="30" maxlength="50"
-						value="#{MBFornecedores.fornecedores.descricao}" />
+					<p:outputLabel value="Descricao :"  for ="txtDescNovo"/>
+					<h:inputText size="30" maxlength="50" id="txtDescNovo"
+						value="#{MBFornecedores.fornecedores.descricao}" required="true"
+						requiredMessage="O campo descrição é obrigatória" />
 
 				</h:panelGrid>
 
 				<h:panelGrid columns="2">
 					<p:commandButton value="Gravar"
 						actionListener="#{MBFornecedores.novo}"
-						oncomplete="PF('dlgforNovo').hide(); PF('tabelaFornecedores').clearFilters();"
+						oncomplete="verificar(xhr, status, args, 'dlgforNovo', 'tbfornecedores');"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
 					<p:commandButton value="Cancelar"
+					    process="@this"
 						onclick="PF('dlgforNovo').hide();" />
 				</h:panelGrid>
 			</h:form>
@@ -121,18 +130,21 @@
 					<h:outputText value="codigo" />
 					<h:outputText value="#{MBFornecedores.fornecedores.codigo}" />
 
-					<h:outputText value="Descrição" />
-					<h:outputText value="#{MBFornecedores.fornecedores.descricao}" />
+					<h:outputText value="Descrição" for="txtEdtfor"/>
+					<h:outputText value="#{MBFornecedores.fornecedores.descricao}" 
+					    required="true" id="txtEdtfor"
+						requiredMessage="O campo descrição é obrigatória"/>
 
 				</h:panelGrid>
 
 				<h:panelGrid columns="2">
 					<p:commandButton value="Editar"
 						actionListener="#{MBFornecedores.editar}"
-						oncomplete="PF('dlgforEditar').hide(); PF('tabelaFornecedores').clearFilters();"
+						oncomplete="verificar(xhr, status, args, 'dlgforEditar', 'tbfornecedores');"
 						update=":frmfornecedores:tbfornecedores :msgGlobal" />
 
 					<p:commandButton value="Cancelar"
+					    process="@this"
 						onclick="PF('dlgforEditar').hide();" />
 				</h:panelGrid>
 
@@ -140,9 +152,11 @@
 		</p:dialog>
 
 
-	</ui:define>
+	
 
-	<ui:define name="conteudo">
+	
+    
+    
 
 	</ui:define>
 
